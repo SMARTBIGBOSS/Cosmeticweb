@@ -27,7 +27,7 @@ router.login = (req, res) => {
         else{
             if(bcrypt.compareSync(req.body.password,customer.password)){
                 let token = customer.generateAuthToken();
-                res.header('x-auth-token',token);
+                res.header('token',token);
                 res.json({ message: 'Customer Successfully Login', data: customer });
             }
             else
