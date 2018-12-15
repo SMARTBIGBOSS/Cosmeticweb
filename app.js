@@ -51,6 +51,7 @@ app.use("*", function (req, res, next) {
 });
 
 app.get('/cosmetics', cosmetics.findAll);
+app.get('/cosmetics/:publisher',cosmetics.findByPublisher)
 app.get('/cosmetic/:id', cosmetics.findOne);
 app.get('/cosmetics/sortByLowPrice', cosmetics.sortByLowPrice);
 app.get('/cosmetics/sortByHighPrice', cosmetics.sortByHighPrice);
