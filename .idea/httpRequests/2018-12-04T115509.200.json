@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "5bd627d5b4aa1a0ba452076d",
+    "sellerId": "2000",
+    "name": "Test Seller_1",
+    "email": "TestSeller_1@gmail.com",
+    "password": "123456",
+    "description": "Testing seller One"
+  },
+  {
+    "_id": "5bd627d5b4aa1a0ba452076e",
+    "sellerId": "2001",
+    "name": "Test Seller_2",
+    "email": "TestSeller_2@gmail.com",
+    "password": "123456",
+    "description": "Testing seller two"
+  }
+]

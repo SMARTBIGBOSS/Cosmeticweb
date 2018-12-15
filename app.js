@@ -15,6 +15,14 @@ const auth = require("./middleware/auth");
 
 var app = express();
 
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 3000;
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -30,20 +38,31 @@ app.use(express.static('./userLogo'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.use("*", function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    if (req.method === 'OPTIONS') {
+        res.send(200)
+    } else {
+        next()
+    }
+});
 
 app.get('/cosmetics', cosmetics.findAll);
+app.get('/cosmetic/:id', cosmetics.findOne);
 app.get('/cosmetics/sortByLowPrice', cosmetics.sortByLowPrice);
 app.get('/cosmetics/sortByHighPrice', cosmetics.sortByHighPrice);
 app.get('/cosmetics/:name', cosmetics.findByName);
 app.get('/cosmetics/:name/:brand', cosmetics.filterByBrand);
 app.get('/customer/:id', auth.authCustomer, customers.findOne);
 app.get('/sellers', sellers.findAll);
-app.get('/seller/:id', auth.authSeller, sellers.findOne);
+app.get('/seller/:id',sellers.findOne);
 app.get('/transaction/:buyerId', auth.authCustomer, transactions.findByBuyerId);
 app.get('/transactions', transactions.findAll);
 app.get('/transactions/countSales', transactions.countSales);
 
-app.put('/cosmetics/:publisher/:id/edit', auth.authSeller, cosmetics.editByID);
+app.put('/cosmetics/:id/edit', cosmetics.editByID);
 app.put('/customer/:id/edit', auth.authCustomer, customers.editByID);
 app.put('/seller/:id/edit', auth.authSeller, sellers.editByID);
 app.put('/transaction/:buyerId/:id/edit', auth.authCustomer, transactions.edit);

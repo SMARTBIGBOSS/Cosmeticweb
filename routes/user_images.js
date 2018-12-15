@@ -2,6 +2,7 @@ const multer = require('multer');
 let path = require('path');
 let express = require('express');
 let router = express.Router();
+/*
 let mongoose = require('mongoose');
 
 let mongodbUri = 'mongodb://cosmeticdb:cosmeticdb100@ds157538.mlab.com:57538/cosmeticdb';
@@ -21,6 +22,7 @@ db.once('open', function () {
 router.get('/', function(req, res, next) {
     res.render('index', {page:'Home', menuId:'home'});
 });
+*/
 
 function checkFileType(file, img){
     const filetypes = /png/;

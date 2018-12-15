@@ -7,7 +7,7 @@ let mongoose = require('mongoose');
 
 let mongodbUri = 'mongodb://cosmeticdb:cosmeticdb100@ds157538.mlab.com:57538/cosmeticdb';
 
-mongoose.connect(mongodbUri);
+mongoose.connect(mongodbUri,{ useNewUrlParser: true });
 
 let db = mongoose.connection;
 
@@ -44,16 +44,16 @@ router.login = (req, res) => {
 
     Seller.findOne({email: req.body.email},function (err, seller) {
         if(!seller)
-            res.json({ message: 'Seller NOT Login!', errmsg : err });
+            res.json({ message: 'Seller NOT Login!', errmsg : err, data: null });
         else{
             if(bcrypt.compareSync(req.body.password,seller.password)){
                 // let token = jwt.sign({_id: seller._id}, 'sellerJwtKey');
                 let token = seller.generateAuthToken();
-                res.header('x-auth-token',token);
+                res.header('token',token);
                 res.json({message: 'Seller Successfully Login', data: seller });
             }
             else
-                res.json({ message: 'Email Address or Password Incorrect!', errmsg : err });
+                res.json({ message: 'Email Address or Password Incorrect!', errmsg : err, data: null });
         }
     });
 }

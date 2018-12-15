@@ -5,7 +5,7 @@ let mongoose = require('mongoose');
 
 let mongodbUri = 'mongodb://cosmeticdb:cosmeticdb100@ds157538.mlab.com:57538/cosmeticdb';
 
-mongoose.connect(mongodbUri);
+mongoose.connect(mongodbUri,{ useNewUrlParser: true });
 
 let db = mongoose.connection;
 
@@ -64,6 +64,17 @@ router.findAll = (req, res) => {
     }
 };
 
+router.findOne = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+
+    Cosmetic.findById(req.params.id,function(err, cosmetic) {
+        if (err)
+            res.json({ message: 'Cosmetic NOT Found!', errmsg : err } );
+        else
+            res.send(JSON.stringify(cosmetic,null,5));
+    });
+}
+
 router.sortByLowPrice = (req, res) =>{
     res.setHeader('Content-Type', 'application/json');
 
@@ -89,11 +100,11 @@ router.sortByHighPrice = (req, res) =>{
 router.editByID = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
-    Cosmetic.update({ "_id": req.params.id },
+    Cosmetic.updateOne({ "_id": req.params.id },
         {   name: req.body.name,
             brand: req.body.brand,
             price: req.body.price,
-            publisher: req.params.publisher,
+            publisher: req.body.publisher,
             release_date: Date.now()
         }, function (err, cosmetic) {
         if(err)

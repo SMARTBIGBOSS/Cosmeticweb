@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "5bd4da9cfb6fc074abb0fd6b",
+    "name": "Eyeliner",
+    "brand": "Maybelline",
+    "price": 9,
+    "publisher": "2000"
+  },
+  {
+    "_id": "5bd4dae2fb6fc074abb0fd75",
+    "name": "Lipstick",
+    "brand": "Maybelline",
+    "price": 6,
+    "publisher": "2000"
+  },
+  {
+    "_id": "5bd4db24fb6fc074abb0fd90",
+    "name": "Loose powder",
+    "brand": "Ponds",
+    "price": 4,
+    "publisher": "2001"
+  },
+  {
+    "_id": "5bd4db67fb6fc074abb0fd99",
+    "name": "Eyeliner",
+    "brand": "Etude House",
+    "price": 8,
+    "publisher": "2002"
+  }
+]

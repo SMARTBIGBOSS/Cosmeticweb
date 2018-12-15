@@ -1,3 +1,147 @@
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T080936.200.json
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T120210.200.json
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T120157.404.html
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T120016.404.html
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T115649.404.html
+
+###
+
+GET http://localhost:3000/cosmetics
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T115641.200.json
+
+###
+
+GET http://localhost:3000/seller/5bd627d5b4aa1a0ba452076d
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T115542.200.json
+
+###
+
+GET http://localhost:3000/sellers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T115509.200.json
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T115149.404.html
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T114919.404.html
+
+###
+
+GET http://localhost:3000/cosmetics
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T114909.200.json
+
+###
+
+GET http://localhost:3000/cosmetic/5bd4da9cfb6fc074abb0fd6b
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-12-04T114738.404.html
+
+###
+
+GET http://localhost:3000/cosmetics
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-28T103047.200.json
+
+###
+
+GET http://localhost:3000/cosmetics
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-27T104850.200.json
+
+###
+
+GET http://localhost:3000/sellers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-27T102839.200.json
+
+###
+
+GET http://localhost:3000/sellers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-27T102834.200.json
+
+###
+
 GET http://localhost:3000/transactions/countSales
 Accept: */*
 Cache-Control: no-cache
@@ -293,148 +437,6 @@ GET http://localhost:3000/transactions/countSales
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T121729.200.json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T121553.200.json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105746.200.json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105531.200.json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105522.200.json
-
-###
-
-GET http://localhost:3000/transactions/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105421.200.json
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105401.401.html
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105137.401.html
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105136.401.html
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T105135.401.html
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T104952.401.html
-
-###
-
-POST http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T104947.404.html
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T104926.401.html
-
-###
-
-GET http://localhost:3000/transaction/countSales
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T104922.401.html
-
-###
-
-GET http://localhost:3000/transactions
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-<> 2018-10-24T104856.200.json
 
 ###
 

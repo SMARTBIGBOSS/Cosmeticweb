@@ -6,7 +6,7 @@ let mongoose = require('mongoose');
 
 let mongodbUri = 'mongodb://cosmeticdb:cosmeticdb100@ds157538.mlab.com:57538/cosmeticdb';
 
-mongoose.connect(mongodbUri);
+mongoose.connect(mongodbUri,{ useNewUrlParser: true });
 
 let db = mongoose.connection;
 
