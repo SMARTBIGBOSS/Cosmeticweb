@@ -23,7 +23,7 @@ router.login = (req, res) => {
 
     Customer.findOne({email: req.body.email},function (err, customer) {
         if(!customer)
-            res.json({ message: 'Customer NOT Login!', errmsg : err });
+            res.json({ message: 'Customer NOT Login!', errmsg : err, data: null });
         else{
             if(bcrypt.compareSync(req.body.password,customer.password)){
                 let token = customer.generateAuthToken();
@@ -31,7 +31,7 @@ router.login = (req, res) => {
                 res.json({ message: 'Customer Successfully Login', data: customer });
             }
             else
-                res.json({ message: 'Email Address or Password Incorrect!', errmsg : err });
+                res.json({ message: 'Email Address or Password Incorrect!', errmsg : err, data: null });
         }
     });
 }
@@ -49,7 +49,7 @@ router.signUp = (req, res) => {
 
     customer.save(function (err){
         if(err)
-            res.json({ message: 'Cosmetic NOT Sign Up!', errmsg : err });
+            res.json({ message: 'Cosmetic NOT Sign Up!', errmsg : err, data: null });
         else
             res.json({ message: 'Cosmetic Successfully Sign Up', data: customer });
     });

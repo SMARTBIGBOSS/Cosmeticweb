@@ -33,7 +33,7 @@ router.register = (req, res) => {
 
     seller.save(function (err){
         if(err)
-            res.json({ message: 'Seller NOT Sign Up!', errmsg : err });
+            res.json({ message: 'Seller NOT Sign Up!', errmsg : err, data: null });
         else
             res.json({ message: 'seller Successfully Sign Up', data: seller });
     });
