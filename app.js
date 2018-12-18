@@ -12,7 +12,6 @@ const sellers = require("./routes/sellers");
 const transactions = require("./routes/transactions");
 const user_images = require("./routes/user_images");
 const auth = require("./middleware/auth");
-
 var app = express();
 
 // set the port of our application

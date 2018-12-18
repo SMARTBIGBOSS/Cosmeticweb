@@ -73,7 +73,7 @@ router.findOne = (req, res) => {
         else
             res.send(JSON.stringify(cosmetic,null,5));
     });
-}
+};
 
 router.findByPublisher = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
@@ -84,17 +84,18 @@ router.findByPublisher = (req, res) => {
         else
             res.send(JSON.stringify(cosmetic,null,5));
     });
-}
+};
 
-router.sortByLowPrice = (req, res) =>{
+router.sortByLowPrice = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
+    //console.log(req.query.name);
+        Cosmetic.find(function (err, cosmetics) {
+            if(err)
+                res.send(err);
+            else
+                res.send(JSON.stringify(cosmetics,null,5));
+        }).sort({price: 1});
 
-    Cosmetic.find(function (err, cosmetics) {
-        if(err)
-            res.send(err);
-        else
-            res.send(JSON.stringify(cosmetics,null,5));
-    }).sort({price: 1});
 };
 
 router.sortByHighPrice = (req, res) =>{
